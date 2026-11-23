@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🧊 Rubik's Cube Solver</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#solver">Solver</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Rubik's Cube <span>Solver</span></h1>
+    <p>Enter your cube colors and solve it step by step!</p>
+</section>
+
+<main class="container">
+
+    <section class="cube-section">
+        <h2>Your Cube</h2>
+        <div id="cube"></div>
+        <button onclick="shuffleCube()">Shuffle Cube</button>
+        <button class="reset" onclick="resetCube()">Reset</button>
+    </section>
+
+    <section class="solver-section" id="solver">
+        <h2>Enter Cube Colors</h2>
+
+        <p>Select a face to edit its colors:</p>
+
+        <select id="face">
+            <option value="Top">Top</option>
+            <option value="Front">Front</option>
+            <option value="Right">Right</option>
+            <option value="Left">Left</option>
+            <option value="Back">Back</option>
+            <option value="Bottom">Bottom</option>
+        </select>
+
+        <div id="color-picker"></div>
+
+        <button onclick="solveCube()">Solve Cube</button>
+
+        <div class="solution">
+            <h2>Solution</h2>
+            <p id="solution-text">
+                Your solution will appear here.
+            </p>
+
+            <p id="step">Step: 0</p>
+
+            <button onclick="previousStep()">Previous</button>
+            <button onclick="nextStep()">Next</button>
+        </div>
+    </section>
+
+</main>
+
+<section id="about">
+    <h2>About This Project</h2>
+    <p>
+        Rubik's Cube Solver is an interactive frontend
+        application developed using HTML, CSS and JavaScript.
+        It demonstrates cube color selection and solution
+        step navigation.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Rubik's Cube Solver | Frontend Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
